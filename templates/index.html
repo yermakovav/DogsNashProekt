@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Собачьи площадки в Москве </title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        #main-container {
+            background-image: url("https://playgroundprofessionals.com/sites/playgroundprofessionals.com/files/styles/mt_large/public/2020-09/dog-on-playground.jpg?itok=fn_1lkSI");
+        background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        #cells-table{
+            background-color: lavender;
+            opacity: 0.8;
+            height: 500px;
+            width: 200px;
+            margin-left: auto;
+            margin-right:auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2> В каком районе больше всего собачьих площадок? </h2>
+    <div id="main-container">
+        <table id="cells-table">
+            <thead>
+             <tr>
+                <th>Район</th>
+                <th>Количество</th>
+             </tr>
+            </thead>
+            <tbody>
+                {% for name, count in data.items() %}
+                        <tr>
+                            <td>{{ name }}</td>
+                            <td>{{ count }}</td>
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
